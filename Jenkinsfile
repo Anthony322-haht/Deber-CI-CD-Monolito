@@ -10,6 +10,8 @@ pipeline {
                 echo 'Restaurando paquetes de MongoDB y demás...'
                 // Usamos el nuget.exe que está en la raíz de tu proyecto
                 bat 'nuget.exe restore Monolito_4am_DB.slnx'
+                // Restauramos también el packages.config antiguo que la nueva versión ignora
+                bat 'nuget.exe restore Monolito_4am_DB\\packages.config -PackagesDirectory packages'
             }
         }
         
