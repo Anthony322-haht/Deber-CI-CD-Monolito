@@ -42,7 +42,7 @@ pipeline {
             steps {
                 echo 'Desplegando la aplicación conectada a MongoDB en IIS...'
                 // Copia la carpeta publicada a la ruta de IIS (inetpub/wwwroot)
-                bat 'xcopy /Y /E "C:\\PublicacionJenkins\\*" "C:\\inetpub\\wwwroot\\MonolitoWeb\\"'
+                bat 'xcopy /Y /E "Monolito_4am_DB\\obj\\Release\\Package\\PackageTmp\\*" "C:\\inetpub\\wwwroot\\MonolitoWeb\\"'
                 echo '¡Despliegue exitoso!'
             }
         }
