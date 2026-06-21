@@ -1,0 +1,396 @@
+﻿*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue-deep: #0a2a8c;
+    --blue-mid: #1a4fd8;
+    --blue-bright: #2563eb;
+    --blue-glow: #3b82f6;
+    --input-bg: rgba(255,255,255,0.92);
+    --text-white: #ffffff;
+    --text-muted: rgba(255,255,255,0.65);
+    --accent-cyan: #00f2fe;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 30% 20%, #1a55e8 0%, #0e3fbe 30%, #0a2080 60%, #061460 100%);
+    position: relative;
+    padding: 20px;
+}
+
+/* Fondo Animado */
+.blob {
+    position: absolute;
+    pointer-events: none;
+    filter: blur(40px);
+    z-index: 1;
+}
+
+.blob-1 {
+    width: 300px;
+    height: 300px;
+    left: -5%;
+    top: -5%;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 12s infinite alternate;
+}
+
+.blob-2 {
+    width: 250px;
+    height: 250px;
+    right: 5%;
+    bottom: 10%;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 15s infinite alternate-reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(40px, 60px) scale(1.1);
+    }
+}
+
+/* ========================================================
+   NUEVO DISEÑO DIVIDIDO (SPLIT SCREEN)
+   ======================================================== */
+.split-card {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px; /* Tarjeta mucho más ancha */
+    background: rgba(15, 28, 63, 0.7);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 28px;
+    overflow: hidden; /* Corta los bordes para que encaje el panel izquierdo */
+    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+}
+
+/* Panel Izquierdo (Branding) */
+.card-left {
+    flex: 0 0 40%; /* Ocupa el 40% del ancho */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+    .card-left .modern-logo {
+        width: 60px;
+        height: 60px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        backdrop-filter: blur(10px);
+    }
+
+        .card-left .modern-logo svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+    .card-left h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .card-left p.subtitle {
+        color: rgba(255,255,255,0.9);
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .benefit-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+        .benefit-list li svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: var(--accent-cyan);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+/* Panel Derecho (Formulario) */
+.card-right {
+    flex: 1; /* Ocupa el resto (60%) */
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ========================================================
+   SISTEMA DE CUADRÍCULA (GRID) PARA LOS CAMPOS
+   ======================================================== */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 15px 20px; /* Espacio vertical y horizontal */
+    margin-bottom: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+/* Ocupa las 2 columnas */
+
+label {
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+/* Contenedor de inputs con Iconos */
+.input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #64748b;
+    pointer-events: none;
+}
+
+.input-wrap input, .input-wrap select {
+    width: 100%;
+    padding: 12px 14px;
+    padding-left: 42px; /* Espacio para el icono */
+    background: var(--input-bg);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.9rem;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+    .input-wrap input:focus, .input-wrap select:focus {
+        border-color: var(--accent-cyan);
+        box-shadow: 0 0 0 4px rgba(0, 242, 254, 0.15);
+    }
+
+/* Ajuste para ojito de contraseña */
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+.input-wrap.password-wrap input {
+    padding-right: 40px;
+}
+
+/* Checkbox Términos */
+.terms-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+    .terms-wrapper input {
+        width: 16px;
+        height: 16px;
+        accent-color: var(--blue-bright);
+        cursor: pointer;
+    }
+
+    .terms-wrapper span {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+/* Botones y Enlaces */
+.btn-register {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: var(--text-white);
+    font-family: 'Sora', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+    .btn-register:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+    }
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: .85rem;
+    color: var(--text-muted);
+}
+
+    .login-link a {
+        color: var(--accent-cyan);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+/* Barra de progreso */
+#progressContainer {
+    display: none;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.progress {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.progress-bar-custom {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--blue-glow), var(--accent-cyan), var(--blue-glow));
+    background-size: 200% 200%;
+    transition: width 2s ease-in-out;
+    animation: gradientMove 2s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--accent-cyan);
+    margin-top: 10px;
+    font-weight: 600;
+    animation: pulseText 1.5s infinite;
+}
+
+@keyframes pulseText {
+    0%, 100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 850px) {
+    .split-card {
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .card-left {
+        padding: 30px;
+        text-align: center;
+    }
+
+        .card-left .modern-logo {
+            margin: 0 auto 15px;
+        }
+
+    .benefit-list {
+        display: none;
+    }
+    /* Ocultamos la lista en celulares para ahorrar espacio */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Todo a 1 columna en celulares */
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .card-right {
+        padding: 30px;
+    }
+}
+
+/* SweetAlert Oscuro */
+.swal2-popup {
+    background: #0f1c3f !important;
+    color: white !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# NuGet
+packages/
+*.nupkg
+
+# Temporary files
+*.tmp
+*.log
+*.cache

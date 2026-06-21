@@ -1,0 +1,51 @@
+Nombre,Cantidad,Precio,Categoria,Proveedor,Imagenes
+Zapato Deportivo Pro,120,59.99,Calzado,Nike,"zapato_1.jpg, zapato_2.jpg"
+Camisa Polo Casual,85,29.50,Ropa,Polo,camisa_frente.jpg
+Pantalón Jean Clásico,40,45.00,Ropa,Levis,jean_1.png
+Zapatillas Running X,200,89.90,Calzado,Adidas,"zapato_1.jpg"
+Zapatos Formales,35,110.00,Calzado,Polo,"zapato_2.jpg"
+Camiseta Básica Blanca,500,12.99,Ropa,Nike,camisa_frente.jpg
+Jean Skinny Fit,60,49.99,Ropa,Levis,jean_1.png
+Botas de Senderismo,25,130.00,Calzado,Nike,"zapato_1.jpg, zapato_2.jpg"
+Chaqueta Deportiva,45,75.50,Ropa,Adidas,camisa_frente.jpg
+Shorts de Entrenamiento,150,22.00,Ropa,Nike,jean_1.png
+Zapatos Mocasines,30,85.00,Calzado,Polo,"zapato_2.jpg"
+Camisa de Cuadros,90,34.90,Ropa,Levis,camisa_frente.jpg
+Pantalón de Vestir,55,55.00,Ropa,Polo,jean_1.png
+Zapatillas Urbanas,110,65.00,Calzado,Adidas,"zapato_1.jpg"
+Sandalias de Verano,80,19.99,Calzado,Nike,"zapato_2.jpg"
+Sudadera con Capucha,70,42.50,Ropa,Adidas,camisa_frente.jpg
+Jean Recto Tradicional,120,39.90,Ropa,Levis,jean_1.png
+Zapatos Escolares,250,28.00,Calzado,Polo,"zapato_1.jpg, zapato_2.jpg"
+Camiseta Estampada,300,15.00,Ropa,Nike,camisa_frente.jpg
+Pantalón Deportivo,100,29.99,Ropa,Adidas,jean_1.png
+Botines de Cuero,40,95.00,Calzado,Polo,"zapato_2.jpg"
+Camisa de Lino,65,45.50,Ropa,Levis,camisa_frente.jpg
+Jean Rasgado Moderno,85,52.00,Ropa,Levis,jean_1.png
+Zapatillas de Baloncesto,45,120.00,Calzado,Nike,"zapato_1.jpg"
+Chanclas de Playa,400,9.99,Calzado,Adidas,"zapato_2.jpg"
+Chaqueta Impermeable,35,89.90,Ropa,Nike,camisa_frente.jpg
+Pantalón Cargo,75,44.50,Ropa,Levis,jean_1.png
+Zapatos de Trabajo,50,78.00,Calzado,Polo,"zapato_1.jpg, zapato_2.jpg"
+Camiseta de Tirantes,200,10.50,Ropa,Adidas,camisa_frente.jpg
+Jean Corto (Short),130,25.99,Ropa,Levis,jean_1.png
+Zapatillas de Tenis,60,95.50,Calzado,Nike,"zapato_1.jpg"
+Botas de Lluvia,80,35.00,Calzado,Polo,"zapato_2.jpg"
+Camisa Formal Manga Larga,110,38.00,Ropa,Polo,camisa_frente.jpg
+Pantalón de Chándal,95,32.00,Ropa,Adidas,jean_1.png
+Zapatos Oxford,20,140.00,Calzado,Polo,"zapato_1.jpg, zapato_2.jpg"
+Camiseta Polo Rayada,140,27.50,Ropa,Polo,camisa_frente.jpg
+Jean Ajustado Negro,160,48.00,Ropa,Levis,jean_1.png
+Zapatillas Skate,75,68.90,Calzado,Adidas,"zapato_1.jpg"
+Pantuflas Cómodas,150,14.99,Calzado,Nike,"zapato_2.jpg"
+Abrigo de Invierno,25,150.00,Ropa,Levis,camisa_frente.jpg
+Leggings Deportivos,180,24.50,Ropa,Nike,jean_1.png
+Zapatos de Tacón,40,85.00,Calzado,Polo,"zapato_1.jpg, zapato_2.jpg"
+Camisa Vaquera,70,42.00,Ropa,Levis,camisa_frente.jpg
+Jean Tiro Alto,90,46.50,Ropa,Levis,jean_1.png
+Zapatillas de Fútbol,55,105.00,Calzado,Nike,"zapato_1.jpg"
+Calcetines Deportivos (Pack),500,12.00,Ropa,Adidas,camisa_frente.jpg
+Pantalón Corto Running,120,18.50,Ropa,Nike,jean_1.png
+Zapatos de Seguridad,30,92.00,Calzado,Polo,"zapato_2.jpg"
+Camiseta Compresión,85,26.00,Ropa,Adidas,camisa_frente.jpg
+Cinturón de Cuero,200,22.00,Ropa,Levis,jean_1.png

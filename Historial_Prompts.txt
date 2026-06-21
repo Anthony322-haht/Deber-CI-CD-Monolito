@@ -1,0 +1,66 @@
+﻿=========================================================
+      HISTORIAL DE PROMPTS Y DESARROLLO DEL SISTEMA
+               PROYECTO: Monolito_4am_DB
+=========================================================
+
+FASE 1: Inicio del Proyecto y Arquitectura Base
+---------------------------------------------------------
+[Usuario] "Necesito crear un sistema web monolítico en ASP.NET WebForms con C#. Tiene que tener Capa de Datos, Capa de Negocio y Presentación. Usa SQL Server para la base de datos."
+
+[Usuario] "Crea las tablas principales: tbl_usuario, tbl_producto, tbl_categoria y tbl_proveedor. Usa LINQ to SQL (DBML) para la conexión de base de datos."
+
+[Usuario] "Quiero que el diseño sea muy profesional y atractivo, que el dashboard se vea de alta calidad y que los mensajes de alerta usen SweetAlert2."
+
+FASE 2: Seguridad Avanzada (Login, Roles y 2FA)
+---------------------------------------------------------
+[Usuario] "Haz una pantalla de Login y otra de Registro de usuarios. Asegúrate de encriptar todas las contraseñas en la base de datos usando AES."
+
+[Usuario] "Agrégale validación obligatoria de cédula ecuatoriana al registrarse."
+
+[Usuario] "Añade un sistema de roles. El ID '1' será Administrador y el '2' será Usuario normal. Dependiendo del rol, oculta las opciones del menú lateral en el Site.Master."
+
+[Usuario] "Necesitamos elevar la seguridad: añádele autenticación de dos pasos (2FA). Al poner su clave, que le mande un código numérico (OTP) al correo para poder entrar al sistema."
+
+[Usuario] "Añade un módulo para recuperar la contraseña olvidada. Que genere un token temporal y se lo mande por correo con un link."
+
+FASE 3: Módulos de Mantenimiento (CRUD)
+---------------------------------------------------------
+[Usuario] "Crea el CRUD completo (Listar, Crear, Editar, Desactivar) para las Categorías y para los Proveedores. Todo usando procedimientos almacenados o LINQ."
+
+[Usuario] "Ahora haz el CRUD para los Productos. Este tiene que ser más complejo: permite subir múltiples fotografías por producto. Guarda el archivo en la carpeta 'Uploads' y registra la ruta en otra tabla de base de datos (tbl_imagen_producto)."
+
+[Usuario] "En las tablas donde listo la información (GridViews), agrégales una barra de búsqueda inteligente y un paginador numérico para que no se sature la pantalla."
+
+FASE 4: Extras (Juegos e Importación Excel)
+---------------------------------------------------------
+[Usuario] "Haz una pantalla para que el administrador pueda subir muchos productos de golpe importando un archivo Excel (.xlsx o .csv). Haz que primero muestre una tabla de previsualización antes de guardar."
+
+[Usuario] "Para el lado de los usuarios normales, agrégales algo entretenido: crea un par de juegos web interactivos como un Juego de Memoria y El Ahorcado."
+
+FASE 5: El Reto del Aula y la Gran Migración a MongoDB
+---------------------------------------------------------
+[Usuario] "Voy a necesitar hacer un apartado en el panel de administrador para poner el ejercicio del rombo que se mostró en el aula. Pares hacia la izquierda e impares para la derecha, el marco debe ser dinámico y hay que validar que no metan números negativos."
+
+[Usuario] "Bueno, ahora me piden esto en la universidad: ¿Qué piensas de hacer todo el sistema con MongoDB Driver? Es obligatorio pasar toda nuestra base de datos SQL a Mongo."
+
+[Antigravity] "¡Claro! Tendremos que rehacer toda la Capa de Datos y Capa de Negocio, reemplazar los INT por BSON ObjectIDs y migrar los queries de LINQ. ¿Empezamos?"
+
+[Usuario] "Estoy de acuerdo con todo y la opción 1, entonces comencemos. Tengo Mongo en Docker y lo uso con Compass."
+
+[Usuario] "Me salieron advertencias del MSBuild con System.Buffers y System.Memory."
+[Antigravity] (Añade Binding Redirects al Web.config).
+
+[Usuario] "Quise registrarme pero me saltó un error LINQ de System.Nullable1[System.Int32] no soportado."
+[Antigravity] (Cambia todos los char? a string en BSON para compatibilidad nativa con MongoDB).
+
+[Usuario] "En el registro no me muestra los perfiles para elegir (Administrador/Usuario), corrígelo porfa."
+[Antigravity] (Desactiva la obligación de ObjectId para el perfil, inyecta auto-seed en MongoDB y soluciona el dropdown).
+
+[Usuario] "Ya me registré e intenté iniciar sesión pero me dice que el usuario no fue encontrado."
+[Antigravity] (Explica que Visual Studio mantenía el caché en memoria y pide reiniciar la depuración para forzar el código limpio).
+
+[Usuario] "Ya le probé todo y sí guardó todo en MongoDB a la perfección."
+
+=========================================================
+[FIN DEL HISTORIAL]
+=========================================================
