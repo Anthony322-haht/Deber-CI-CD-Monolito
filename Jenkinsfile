@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Restaurando paquetes de MongoDB y demás...'
                 // Usamos el nuget.exe que está en la raíz de tu proyecto
-                bat 'nuget.exe restore Monolito_4am_DB.sln'
+                bat 'nuget.exe restore Monolito_4am_DB.slnx'
             }
         }
         
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Compilando proyecto ASP.NET 4.8...'
                 // Llamamos al MSBuild de tu Visual Studio
-                bat '"C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\MSBuild\\Current\\Bin\\MSBuild.exe" Monolito_4am_DB.sln /p:Configuration=Release'
+                bat '"C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\MSBuild\\Current\\Bin\\MSBuild.exe" Monolito_4am_DB.slnx /p:Configuration=Release'
             }
         }
         
