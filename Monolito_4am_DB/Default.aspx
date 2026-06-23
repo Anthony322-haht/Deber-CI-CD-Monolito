@@ -6,7 +6,7 @@
         <!-- Título de la página -->
         <div class="row mb-3">
             <div class="col-12 d-flex justify-content-between align-items-center">
-                <h3 class="m-0" style="color: #343a40;">Dashboard</h3>
+                <h3 class="m-0" style="color: #343a40;">Dashboard - CI/CD Automatizado!</h3>
                 <ol class="breadcrumb m-0 bg-transparent p-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item active">Dashboard</li>
